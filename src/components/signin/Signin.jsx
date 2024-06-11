@@ -21,7 +21,7 @@ const Signin = () => {
     };
 
     return (
-        <div>
+        <div className='signin-container'>
             <input type="radio" id="loginForm" name="formToggle" checked={activeForm === 'login'} onChange={() => setActiveForm('login')} />
             <input type="radio" id="forgotForm" name="formToggle" checked={activeForm === 'forgot'} onChange={() => setActiveForm('forgot')} />
 
