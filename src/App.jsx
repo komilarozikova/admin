@@ -7,6 +7,7 @@ import MoonIcon from "./assets/icons/moon.svg";
 import SunIcon from "./assets/icons/sun.svg";
 import BaseLayout from "./layout/BaseLayout";
 import { Dashboard, PageNotFound } from "./screens";
+import Signin from "./components/signin/Signin";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
+          <Route path="/signin" element={<Signin />} />
         </Routes>
 
         <button
