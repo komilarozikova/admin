@@ -119,3 +119,13 @@
     display: none;
   }
   
+
+  @media only screen and (max-width: 450px) {
+    /* CSS styles inside this block will be applied only to screens wider than 450px */
+  
+    .wrapper{
+        width: 310px;
+    }
+  
+    /* You can add more styles here */
+  }
