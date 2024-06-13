@@ -83,11 +83,11 @@
       border: none;
       outline: none;
       border-radius: 40px;
-      border: 1px solid rgb(117, 107, 211);
+      border: 1px solid rgba(255, 225, 2, 0.851);
       box-shadow: 0 0 10px rgba(0, 0, 0, .1);
       cursor: pointer;
       font-size: 16px;
-      color: #ffffff;
+      color: var(--dark-color);
       font-weight: 600;
     }
   

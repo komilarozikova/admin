@@ -3,6 +3,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { LIGHT_THEME } from "../../constants/themeConstants";
 import LogoBlue from "../../assets/images/logo_blue.svg";
 import LogoWhite from "../../assets/images/logo_white.svg";
+import apexlogo from "../../assets/images/apexlogo.jpeg"
 import {
   MdOutlineAttachMoney,
   MdOutlineBarChart,
@@ -49,10 +50,13 @@ const Sidebar = () => {
     >
       <div className="sidebar-top">
         <div className="sidebar-brand">
-        <img src={theme === LIGHT_THEME ? LogoBlue : LogoWhite} alt="" />
-         <Link to="/dashboard">
-         <span className="sidebar-brand-text">Admin</span>
-         </Link>
+          <Link className="yellowimg" to="/dashboard">
+          <img src={theme === LIGHT_THEME ? apexlogo : apexlogo} alt="" />
+            <div className="sidebar-brand-text">
+              <h4>apexpizza</h4>
+              <h6>Нет места для теста</h6>
+            </div>
+          </Link>
         </div>
         <button className="sidebar-close-btn" onClick={closeSidebar}>
           <MdOutlineClose size={24} />

@@ -5,7 +5,7 @@ const AreaCards = () => {
   return (
     <section className="content-area-cards">
       <AreaCard
-        colors={["#e4e8ef", "#475be8"]}
+        colors={["#e4e8ef", "#fdeb04"]}
         percentFillValue={80}
         cardInfo={{
           title: "Todays Sales",
