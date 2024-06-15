@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import AreaTop from '../../components/dashboard/areaTop/AreaTop';
 
 const ProfilePage = () => {
   const [name, setName] = useState('');
@@ -28,6 +29,7 @@ const ProfilePage = () => {
 
   return (
     <div>
+      <AreaTop />
       <h1>Profile</h1>
       <form onSubmit={handleSubmit}>
         <div>

@@ -1,5 +1,6 @@
 import AreaTableAction from "../../components/dashboard/areaTable/AreaTableAction";
 import "../../components/dashboard/areaTable/AreaTable.scss"
+import AreaTop from "../../components/dashboard/areaTop/AreaTop";
 
 
 const TABLE_HEADS = [
@@ -72,6 +73,7 @@ const TABLE_DATA = [
 const UsersPage = () => {
   return (
     <section className="content-area-table">
+      <AreaTop />
       <div className="data-table-info">
         <h4 className="data-table-title">Users</h4>
       </div>
