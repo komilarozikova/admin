@@ -1,7 +1,7 @@
 import AreaTableAction from "../../components/dashboard/areaTable/AreaTableAction";
 import "../../components/dashboard/areaTable/AreaTable.scss"
-import AreaTop from "../../components/dashboard/areaTop/AreaTop";
-
+import { MdOutlineMenu } from "react-icons/md";
+import '../profile/ProfilePage.scss';
 
 const TABLE_HEADS = [
   "Name",
@@ -72,47 +72,56 @@ const TABLE_DATA = [
 
 const UsersPage = () => {
   return (
-    <section className="content-area-table">
-      <AreaTop />
-      <div className="data-table-info">
-        <h4 className="data-table-title">Users</h4>
-      </div>
-      <div className="data-table-diagram">
-        <table>
-          <thead>
-            <tr>
-              {TABLE_HEADS?.map((th, index) => (
-                <th key={index}>{th}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {TABLE_DATA?.map((dataItem) => {
-              return (
-                <tr key={dataItem.id}>
-                  <td>{dataItem.name}</td>
-                  <td>{dataItem.order_id}</td>
-                  <td>{dataItem.date}</td>
-                  <td>{dataItem.customer}</td>
-                  <td>
-                    <div className="dt-status">
-                      <span
-                        className={`dt-status-dot dot-${dataItem.status}`}
-                      ></span>
-                      <span className="dt-status-text">{dataItem.status}</span>
-                    </div>
-                  </td>
-                  <td>${dataItem.amount.toFixed(2)}</td>
-                  <td className="dt-cell-action">
-                    <AreaTableAction />
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <div>
+      <button
+        className="sidebar-open-btn"
+        type="button"
+        onClick={() => dispatch({ type: "SIDEBAR_OPEN", payload: true })}
+      >
+        <MdOutlineMenu size={24} />
+      </button>
+      <h1 className="area-top-title">Users</h1>
+      <section className="content-area-table">
+        {/* <div className="data-table-info">
+          <h4 className="data-table-title">Users</h4>
+        </div> */}
+        <div className="data-table-diagram">
+          <table>
+            <thead>
+              <tr>
+                {TABLE_HEADS?.map((th, index) => (
+                  <th key={index}>{th}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {TABLE_DATA?.map((dataItem) => {
+                return (
+                  <tr key={dataItem.id}>
+                    <td>{dataItem.name}</td>
+                    <td>{dataItem.order_id}</td>
+                    <td>{dataItem.date}</td>
+                    <td>{dataItem.customer}</td>
+                    <td>
+                      <div className="dt-status">
+                        <span
+                          className={`dt-status-dot dot-${dataItem.status}`}
+                        ></span>
+                        <span className="dt-status-text">{dataItem.status}</span>
+                      </div>
+                    </td>
+                    <td>${dataItem.amount.toFixed(2)}</td>
+                    <td className="dt-cell-action">
+                      <AreaTableAction />
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
   );
 };
 

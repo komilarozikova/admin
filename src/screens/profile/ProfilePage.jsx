@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import AreaTop from '../../components/dashboard/areaTop/AreaTop';
+import { MdOutlineMenu } from "react-icons/md";
+
 
 const ProfilePage = () => {
   const [name, setName] = useState('');
@@ -29,22 +30,31 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <AreaTop />
-      <h1>Profile</h1>
+         <button
+          className="sidebar-open-btn"
+          type="button"
+          onClick={() => dispatch({ type: "SIDEBAR_OPEN", payload: true })}
+        >
+          <MdOutlineMenu size={24} />
+        </button>
+      <h1 className="area-top-title">Profile</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="line-input">
           <label>Name:</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          <input
+            type="text"/>
         </div>
-        <div>
+        <div className="line-input">
           <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input
+            type="email"  />
         </div>
-        <div>
+        <div className="line-input">
           <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input
+            type="password"  />
         </div>
-        <button type="submit">Save Changes</button>
+        <button type="submit" className='save-button'>Save Changes</button>
       </form>
     </div>
   );
